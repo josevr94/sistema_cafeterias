@@ -1,0 +1,17 @@
+#Crear el entorno virtul : Python3 -m venv Proyecto_django
+# Activar el entorno virtual source myenv/bin/activate (mac o linux)
+#instalar django pip install Django
+# crear el proyecto django-admin startproject cafeteria
+# entrar al proyecto cd cafeteria
+# verificar que toe este bien  python manage.py  runserver
+#Crear la app  django-admin startapp myapp
+# Dar alta la app en settings
+# crear el url.py dentro la aplicacion myapp
+# incluir la ruta  myapp dentro del url.py del sitio principal
+ 
+ 
+# crear los modelos
+#crearia los migracion
+# haria la migracion
+# crea super usuario
+# validaria que funcione Admin django
