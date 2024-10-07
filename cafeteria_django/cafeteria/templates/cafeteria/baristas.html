@@ -3,3 +3,24 @@
 {% block title %}Nuestros Baristas{% endblock title %}
 
 {% load static %} 
+
+
+{% block content %}
+<div class='container'>
+    <div class='row '>
+        {% for persona in personal %}   
+    <div class="card mt-4" style="width: 18rem;">
+        <img src='{{personas.foto}}' class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{persona.nombre}}</h5>
+          <p class="card-text">{{persona.biografia}}</p>
+          
+        </div>
+      </div>
+      {% endfor %}
+    {% endblock content %}
+    </div>
+</div>
+
+
+    

@@ -1,5 +1,48 @@
 {% extends 'cafeteria/layout.html' %}
+{% load form_tags %}
 
 {% block title %}Contacto{% endblock title %}
 
-{% load static %} 
+{% load static %}
+
+
+{% block content %}
+<div class = 'container'>
+    <h3>Contactanos</h3>
+<div class='row'>
+    <form action="{{contacto}}" method="post">
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+            
+            {{ form.nombre|filtro_boostrap:"form-control" }}
+            <label for="floatingInput">Nombre</label>
+          </div>
+          <div class="form-floating mb-3">
+            
+            {{ form.apellido|filtro_boostrap:"form-control" }}
+            <label for="floatingInput">Apellido</label>
+          </div>
+          <div class="form-floating mb-3">
+            
+            {{ form.email|filtro_boostrap:"form-control" }} 
+            <label for="floatingInput">Email </label>
+          </div>
+          <div class="mb-3">
+             
+            <label for="floatingInput" class="form-label">Descripcion</label>
+            {{ form.descripcion|filtro_boostrap:"form-control" }}
+            
+          </div>
+          <button type="submit" class="btn btn-dark">Enviar</button>
+
+    </form>
+</div>
+
+</div>
+
+
+
+{% endblock content %}
+    
+
+
